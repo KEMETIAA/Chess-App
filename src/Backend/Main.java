@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -13,7 +14,7 @@ public class Main extends Application {
 
 
     public void start(Stage primaryStage) {
-        Parent  root;
+        Parent root;
         try {
             root = FXMLLoader.load(getClass().getResource("/Screens/MainMenu.fxml"));
         } catch (IOException e) {
@@ -23,6 +24,8 @@ public class Main extends Application {
         Scene MainMenu = new Scene(root);
         primaryStage.setTitle("Chess");
         primaryStage.setScene(MainMenu);
+        primaryStage.setResizable(false);
+        primaryStage.getIcons().add(new Image("/images/Logo.png"));
         primaryStage.show();
     }
 
