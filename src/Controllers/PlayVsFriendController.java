@@ -69,5 +69,6 @@ public class PlayVsFriendController extends MainMenuController {
         if(Timer!=null){
             System.out.println(Timer.getValue());
         }
+        loadscreen(e, "/Screens/Board.fxml");
     }
 }
